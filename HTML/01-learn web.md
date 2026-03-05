@@ -21,3 +21,13 @@
 - 浏览器所采用的「渲染引擎」也称之为「浏览器内核」，用于解析 HTML和CSS、布局、渲染等工作。渲染引擎决定了浏览器如何显示网页的内容以及页面的格式信息。        
 
 ### 2.JS引擎
+- 别称JS解释器。用来解析和执行网页中的Javascript代码
+
+### 七大部分
+1. User Interface（UI界面）：包括地址栏、前进/后退按钮、书签菜单等。也就是浏览器主窗口之外的其他部分。
+2. Browser engine （浏览器引擎）：用来查询和操作渲染引擎。是UI界面和渲染引擎之间的桥梁。
+3. Rendering engine（渲染引擎）：用于解析HTML和CSS，并将解析后的内容显示在浏览器上。
+4. Networking （网络模块）：用于发送网络请求。
+5. JavaScript Interpreter（JavaScript解析器）：用于解析和执行 JavaScript 代码。
+6. UI Backend（UI后端）：用于绘制组合框、弹窗等窗口小组件。它会调用操作系统的UI方法。
+7. Data Persistence（数据存储模块）：比如数据存储 cookie、HTML5中的localStorage、sessionStorage。
