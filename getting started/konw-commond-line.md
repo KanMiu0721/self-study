@@ -40,9 +40,17 @@
 大多数终端命令都有选项——这些是你在命令末尾添加的修饰符，使命令的行为略有不同。这些字母通常由命令名称后面的空格、破折号和一个或多个字母组成。
 
 ### 创建、复制、移动、删除:
-- mkdir—— 这会在你当前所在的目录中创建一个新目录，命令名称后面是你提供的名字。例如，将创建一个名为 的新目录。mkdir my-awesome-websitemy-awesome-website
-- rmdir—— 移除命名目录，但仅当该目录为空时。例如，会移除我们上面创建的目录。如果你想删除一个不空的目录（同时移除它包含的所有内容），也可以用替代（见下文），但这很危险。确保目录里没有你以后可能需要的东西，否则它会永远消失。rmdir my-awesome-websiterm -r
-- touch——在当前目录内创建一个新的空文件。例如，创建一个新的空文件，称为 。touch mdn-example.mdmdn-example.md
-mv—— 将文件从第一个指定的文件位置移动到第二个指定文件位置，例如（这些位置以文件路径形式写入）。该命令将当前目录中调用的文件移动到当前目录中调用的文件。技术上文件是被移动的，但从实际操作角度看，这个命令实际上是在重命名文件。mv mdn-example.md mdn-example.txtmdn-example.mdmdn-example.txt
-- cp—— 在用法上类似于，在第一个指定位置创建文件副本，在第二个指定位置创建文件副本。例如，创建一个 的复制品 called （当然你可以选择别的名字）。mvcpcp mdn-example.txt mdn-example.txt.bakmdn-example.txtmdn-example.txt.bak
-- rm—— 删除指定的文件。例如，删除一个名为 的单一文件。请注意，这种删除是永久的，无法通过你桌面用户界面上的回收站来撤销。rm mdn-example.txtmdn-example.txt
+- mkdir—— 这会在你当前所在的目录中创建一个新目录，命令名称后面是你提供的名字。例如，将创建一个名为my-awesome-website的新目录。```mkdir my-awesome-website```
+
+- rmdir—— 移除命名目录，**但仅当该目录为空**时。例如，会移除我们上面创建的目录。如果你想删除一个不空的目录（同时移除它包含的所有内容），也可以用```rmdir my-awesome-websiterm -r```替代，但这很危险。确保目录里没有你以后可能需要的东西，否则它会永远消失。
+
+- touch——在当前目录内创建一个新的空文件。例如，创建一个新的空文件，称为 。```touch mdn-example.mdmdn-example.md```
+
+- mv—— 将文件从第一个指定的文件位置移动到第二个指定文件位置，例如（这些位置以文件路径形式写入）技术上文件是被移动的，但从实际操作角度看，这个命令实际上是在重命名文件。
+```mv mdn-example.md mdn-example.txtmdn-example.mdmdn-example.txt```
+
+- cp—— 在用法上类似于，在第二个指定位置创建在第一个指定位置的文件副本。例如，创建一个called的复制品 (当然你可以选择别的名字)
+```
+mv cp cp mdn-example.txt mdn-example.txt.bakmdn-example.txtmdn-example.txt.bak
+```
+- rm—— 删除指定的文件。例如，删除一个单一文件。请注意，这种删除是永久的，无法通过你桌面用户界面上的回收站来撤销。rm mdn-example.txtmdn-example.txt
