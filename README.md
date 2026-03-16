@@ -20,7 +20,9 @@
 
 #我的工具箱
 - **编辑器**: VS Code
-- **主要资料**: [千古壹号前端入门](https://web.qianguyihao.com/)
+- **主要资料**:
+[~~千古壹号前端入门~~](~~https://web.qianguyihao.com/~~)
+[MDN官网](https://developer.mozilla.org/en-US/)
 - **目标区域**: 上海 (字节、小红书、美团、携程等)
 
 ---
