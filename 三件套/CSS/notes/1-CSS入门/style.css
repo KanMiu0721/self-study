@@ -1,0 +1,17 @@
+h1 {
+  color:palegreen;
+}
+
+
+p,li
+{
+    color:mediumturquoise;
+}
+
+li em {
+  color: rebeccapurple;
+}
+
+h1 + p {
+  font-size: 200%;
+}
