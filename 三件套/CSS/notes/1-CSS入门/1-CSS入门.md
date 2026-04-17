@@ -89,3 +89,139 @@ h1 + p {
   font-size: 200%;
 }
 ```
+
+## 基于状态的样式
+最后一种造型类型是能够根据物品的状态进行造型
+
+为链接做样式时，需要针对`<a>`（锚点）元素。根据未访问、访问、悬停、键盘聚焦，或点击（激活）过程中，该状态不同。
+
+可以用 CSS 来针对这些不同的状态——下面的 CSS 将未访问链接样式为粉色，访问链接为绿色
+```
+a:link {
+  color: pink;
+}
+
+a:visited {
+  color: green;
+}
+```
+可以在用户鼠标悬停时改变链接的外观，例如移除下划线
+```
+a:hover {
+  text-decoration: none;
+}
+```
+
+## 组合选择器和组合器的结合
+可以将多个选择器和组合器组合在一起
+```
+/* selects any <span> that is inside a <p>, which is inside an <article>  */
+article p span {
+}
+
+/* selects any <p> that comes directly after a <ul>, which comes directly after an <h1>  */
+h1 + ul + p {
+}
+```
+也可以将多种类型组合在一起
+```
+h1 + p .special {
+  color: yellow;
+  background-color: black;
+  padding: 5px;
+}
+```
+
+# 函数
+虽然大多数值是相对简单的关键词或数值，但也有一些值以函数的形式存在
+
+## The calc()函数
+它可以在CSS中进行简单的数学运算
+```
+HTML:
+
+<div class="outer"><div class="box">The inner box is 90% - 30px.</div></div>
+
+CSS:
+
+.outer {
+  border: 5px solid black;
+}
+
+.box {
+  padding: 10px;
+  width: calc(90% - 30px);
+  background-color: rebeccapurple;
+  color: white;
+}
+```
+
+## Transform函数
+还有着transform属性的各种值，如rotate()
+```
+HTML:
+
+<div class="box"></div>
+
+CSS:
+
+.box {
+  margin: 30px;
+  width: 100px;
+  height: 100px;
+  background-color: rebeccapurple;
+  transform: rotate(0.8turn);
+}
+```
+
+# @rules
+CSS @rules（发音为“at-rules”）提供 CSS 应如何表现的指令。你很可能会遇到的一个常见@rule是@media，用于创建媒体查询
+
+类似c++中的if等条件判断
+```
+body {
+  background-color: pink;
+}
+
+@media (width >= 30em) {
+  body {
+    background-color: blue;
+  }
+}
+```
+
+# 简写属性
+一些属性如font、background、padding、border和margin被称为简写属性。这是因为简写属性会在一行中设置多个值
+
+比如，这行代码：
+```
+padding: 10px 15px 15px 5px;
+```
+等价于以下四行代码：
+```
+padding-top: 10px;
+padding-right: 15px;
+padding-bottom: 15px;
+padding-left: 5px;
+```
+
+```
+background: red url("bg-graphic.png") 10px 10px repeat-x fixed;
+```
+等价于
+```
+background-color: red;
+background-image: url("bg-graphic.png");
+background-position: 10px 10px;
+background-repeat: repeat-x;
+background-attachment: fixed;
+```
+
+# CSS注释
+CSS评论以/*开头，以*/结尾；
+有了这种注释功能，在代码编辑器中搜索注释就成了高效找到代码段落的一种方式
+
+# CSS 中的空白空间:
+正如浏览器会忽略HTML中的额外空白，浏览器也会忽略CSS内部的额外空白
+
+但是请注意，一些空白变化可能导致错误。属性名称绝不包含空白，而期望多个值之间有空白的属性值如果移除该空间，则无效

@@ -15,3 +15,12 @@ li em {
 h1 + p {
   font-size: 200%;
 }
+a:link {
+  color:crimson;
+}
+a:visited {
+  color:slateblue;
+}
+a:hover {
+  text-decoration:none;
+}
